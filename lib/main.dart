@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -17,48 +19,17 @@ class CashControl extends StatelessWidget {
         appBar: AppBar(
           title: const Text('EU NÃO ACREDITO!')
         ),
-        body: const Column(
-          children: [
-            Row(
-              children: [
-                Expanded(
-                  child: Text('COLUNA 1'),
-                ),
-                Expanded(
-                  child: Text('COLUNA 2'),
-                ),
-                Expanded(
-                  child: Text('COLUNA 3')
-                )
-              ]
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Text('COLUNA 1'),
-                ),
-                Expanded(
-                  child: Text('COLUNA 2'),
-                ),
-                Expanded(
-                  child: Text('COLUNA 3')
-                )
-              ]
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Text('COLUNA 1'),
-                ),
-                Expanded(
-                  child: Text('COLUNA 2'),
-                ),
-                Expanded(
-                  child: Text('COLUNA 3')
-                )
-              ]
-            )
-          ]
+        body: const Center(
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.star, color: Colors.green,),
+              Icon(Icons.star, color: Colors.green,),
+              Icon(Icons.star, color: Colors.green,),
+              Icon(Icons.star, color: Colors.black,),
+              Icon(Icons.star, color: Colors.black,)
+            ]
+          )
         )
       )
     );
