@@ -19,15 +19,24 @@ class CashControl extends StatelessWidget {
         appBar: AppBar(
           title: const Text('EU NÃO ACREDITO!')
         ),
-        body: const Center(
+        body: Container(
           child: Row(
-            mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.star, color: Colors.green,),
-              Icon(Icons.star, color: Colors.green,),
-              Icon(Icons.star, color: Colors.green,),
-              Icon(Icons.star, color: Colors.black,),
-              Icon(Icons.star, color: Colors.black,)
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.red
+              ),
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.yellow
+              ),
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.green
+              )
             ]
           )
         )
