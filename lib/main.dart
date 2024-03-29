@@ -17,14 +17,48 @@ class CashControl extends StatelessWidget {
         appBar: AppBar(
           title: const Text('EU NÃO ACREDITO!')
         ),
-        body: Container(
-          child: const Row(
-            children: [
-              Text('NOME'),
-              Text('SOBRENOME'),
-              Text('IDADE')
-            ]
-          )
+        body: const Column(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: Text('COLUNA 1'),
+                ),
+                Expanded(
+                  child: Text('COLUNA 2'),
+                ),
+                Expanded(
+                  child: Text('COLUNA 3')
+                )
+              ]
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: Text('COLUNA 1'),
+                ),
+                Expanded(
+                  child: Text('COLUNA 2'),
+                ),
+                Expanded(
+                  child: Text('COLUNA 3')
+                )
+              ]
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: Text('COLUNA 1'),
+                ),
+                Expanded(
+                  child: Text('COLUNA 2'),
+                ),
+                Expanded(
+                  child: Text('COLUNA 3')
+                )
+              ]
+            )
+          ]
         )
       )
     );
