@@ -19,26 +19,62 @@ class CashControl extends StatelessWidget {
         appBar: AppBar(
           title: const Text('EU NÃO ACREDITO!')
         ),
-        body: Container(
-          child: Row(
-            children: [
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.red
-              ),
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.yellow
-              ),
-              Container(
-                width: 100,
-                height: 100,
-                color: Colors.green
-              )
-            ]
-          )
+        body: Column(
+          children: <Widget>[
+            Container(
+              height: 100,
+              color: Colors.red,
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 100,
+                    color: Colors.blue,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    height: 100,
+                    color: Colors.green,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: <Widget> [
+                Expanded(
+                  child: Container(
+                    height: 100,
+                    color: Colors.pink,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    height: 100,
+                    color: Colors.orange,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    height: 100,
+                    color: Colors.black,
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: <Widget> [
+                Expanded(
+                  child: Container(
+                    height: 100,
+                    color: Colors.blueAccent,
+                  ),
+                )
+              ],
+            )
+          ],
+          
         )
       )
     );
