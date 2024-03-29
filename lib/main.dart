@@ -12,6 +12,11 @@ void main() => runApp( const CashControl() );
 class CashControl extends StatelessWidget {
   const CashControl({super.key});
 
+  //functions
+  pressButton(){
+    print("Clicou nbo botão, eu não acredito");
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,62 +24,16 @@ class CashControl extends StatelessWidget {
         appBar: AppBar(
           title: const Text('EU NÃO ACREDITO!')
         ),
-        body: Column(
-          children: <Widget>[
-            Container(
-              height: 100,
-              color: Colors.red,
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    height: 100,
-                    color: Colors.blue,
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    height: 100,
-                    color: Colors.green,
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: <Widget> [
-                Expanded(
-                  child: Container(
-                    height: 100,
-                    color: Colors.pink,
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    height: 100,
-                    color: Colors.orange,
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    height: 100,
-                    color: Colors.black,
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: <Widget> [
-                Expanded(
-                  child: Container(
-                    height: 100,
-                    color: Colors.blueAccent,
-                  ),
-                )
-              ],
-            )
-          ],
-          
+        body: Center(
+          child: Column (
+            children: <Widget>[
+              const Text("Clique no botão abaixo"),
+              TextButton(
+                onPressed: pressButton, 
+                child: const Text("Clique aqui")
+              )
+            ],
+          )
         )
       )
     );
