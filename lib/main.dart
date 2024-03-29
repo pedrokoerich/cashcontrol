@@ -24,18 +24,36 @@ class CashControl extends StatelessWidget {
         appBar: AppBar(
           title: const Text('EU NÃO ACREDITO!')
         ),
-        body: Center(
-          child: Column (
-            children: <Widget>[
-              const Text("Clique no botão abaixo"),
-              TextButton(
-                onPressed: pressButton, 
-                child: const Text("Clique aqui")
-              )
-            ],
-          )
+        body: Column(
+         children: <Widget>[
+          Exemplo(),
+          Exemplo()
+         ],
         )
       )
+    );
+  }
+}
+
+class Exemplo extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      margin: EdgeInsets.all(10),
+      padding: EdgeInsets.all(10),
+      color: Colors.red,
+      child: Column(
+        children: [
+          Text("Texto de Exemplo"),
+          TextButton(
+            child: Text("Clique aqui"),
+            onPressed: () => {
+              print("EU NAO ACREDITO")
+            },
+          )
+        ],
+      ),
     );
   }
 }
