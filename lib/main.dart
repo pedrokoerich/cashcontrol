@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -25,56 +24,15 @@ class CashControl extends StatelessWidget {
           title: const Text('EU NÃO ACREDITO!')
         ),
         body: Column(
-         children: <Widget>[
-          Exemplo(
-            title: 'Texto 1',
-            onPress: () {
-              print("Clicou no Item 1");
-            },
-          ),
-          Exemplo(
-            title: 'Texto 2',
-            onPress: () {
-              print("Clicou no Item 2");
-            },
-          )
-         ],
-        )
+          children: [
+              const Image(
+                width: 100,
+                image: AssetImage('assets/monkey.jpg')
+              ),
+              Image.network('https://www.google.com.br/google.jpg')
+          ],
+        ) 
       )
-    );
-  }
-}
-
-class Exemplo extends StatelessWidget{
-  
-  Exemplo({
-    this.title,
-    required this.onPress
-  });
-
-  var title;
-  VoidCallback onPress;
-
-  @override
-  Widget build(BuildContext context) {
-
-    //se for nulo
-    title ??= 'Título de Exemplo';
-
-    return Container(
-      width: 200,
-      margin: const EdgeInsets.all(10),
-      padding: const EdgeInsets.all(10),
-      color: Colors.red,
-      child: Column(
-        children: [
-          const Text("Texto de Exemplo"),
-          TextButton(
-            onPressed: onPress,
-            child: Text(title),
-          )
-        ],
-      ),
     );
   }
 }
