@@ -26,8 +26,18 @@ class CashControl extends StatelessWidget {
         ),
         body: Column(
          children: <Widget>[
-          Exemplo(),
-          Exemplo()
+          Exemplo(
+            title: 'Texto 1',
+            onPress: () {
+              print("Clicou no Item 1");
+            },
+          ),
+          Exemplo(
+            title: 'Texto 2',
+            onPress: () {
+              print("Clicou no Item 2");
+            },
+          )
          ],
         )
       )
@@ -36,21 +46,32 @@ class CashControl extends StatelessWidget {
 }
 
 class Exemplo extends StatelessWidget{
+  
+  Exemplo({
+    this.title,
+    required this.onPress
+  });
+
+  var title;
+  VoidCallback onPress;
+
   @override
   Widget build(BuildContext context) {
+
+    //se for nulo
+    title ??= 'Título de Exemplo';
+
     return Container(
       width: 200,
-      margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       color: Colors.red,
       child: Column(
         children: [
-          Text("Texto de Exemplo"),
+          const Text("Texto de Exemplo"),
           TextButton(
-            child: Text("Clique aqui"),
-            onPressed: () => {
-              print("EU NAO ACREDITO")
-            },
+            onPressed: onPress,
+            child: Text(title),
           )
         ],
       ),
