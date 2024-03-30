@@ -23,14 +23,23 @@ class CashControl extends StatelessWidget {
         appBar: AppBar(
           title: const Text('EU NÃO ACREDITO!')
         ),
-        body: Column(
-          children: [
-              const Image(
-                width: 100,
-                image: AssetImage('assets/monkey.jpg')
+        body: Center(
+          child: Column(
+            children: <Widget>[
+              const Text(
+                "eu não acredito",
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold
+                )
               ),
-              Image.network('https://www.google.com.br/google.jpg')
-          ],
+              Container(
+                child: Icon(Icons.star, size: 30, color: Colors.blue),
+              ),
+              TextButton(onPressed: () {print("AI MEU DEUS");}, child: Text("Clique aqui"),)
+            ],
+          ),
         ) 
       )
     );
