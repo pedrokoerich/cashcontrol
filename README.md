@@ -53,7 +53,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issue
 
 Este projeto foi desenvolvido por:
  - [Pedro Henrique Koerich](https://github.com/pedrokoerich).
- - [Richard Melo](https://github.com/richard_melo).
+ - [Richard Melo](https://github.com/richard-melo).
 
 ## Licença
 
@@ -64,4 +64,4 @@ Este projeto está licenciado sob a [Licença MIT](LICENSE).
 Se precisar de ajuda ou tiver alguma dúvida, não hesite em entrar em contato:
 
 - [Pedro Henrique Koerich](https://github.com/pedrokoerich) 📧
-- [Richard Melo](https://github.com/richard_melo) 📧
+- [Richard Melo](https://github.com/richard-melo) 📧
