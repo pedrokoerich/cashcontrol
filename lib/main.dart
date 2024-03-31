@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'botao.dart';
 
 //TODO: NO DART, TUDO É WIDGET (COMPONENTE PRA QUEM É DO ANGULAR)
 
@@ -10,8 +12,14 @@ class CashControl extends StatelessWidget {
   const CashControl({super.key});
 
   //functions
-  pressButton(){
-    print("Clicou nbo botão, eu não acredito");
+  callAction(){
+    print("LIGANDO...");
+  }
+  locationAction(){
+    print("LOCALIZANDO...");
+  }
+  shareAction(){
+    print("COMPARTILHANDO...");
   }
 
   @override
@@ -66,42 +74,24 @@ class CashControl extends StatelessWidget {
               ),
             ),
             Container(
-              padding: const EdgeInsets.all(20),
+              padding: EdgeInsets.all(20),
               child: Row(
                 children: [
-                  Expanded(
-                    child: TextButton(
-                      onPressed: (){},
-                      child: const Column(
-                        children: <Widget>[
-                          Icon(Icons.call, color: Colors.blue,),
-                          Text("Ligar")
-                        ],
-                      )
-                    )
+                  Botao(
+                    icon: Icon(Icons.share),
+                    text: 'Ligar',
+                    onPress: callAction
                   ),
-                  Expanded(
-                    child: TextButton(
-                      onPressed: (){},
-                      child: const Column(
-                        children: <Widget>[
-                          Icon(Icons.location_on, color: Colors.blue,),
-                          Text("Mapa")
-                        ],
-                      )
-                    )
+                  Botao(
+                    icon: Icon(Icons.location_on),
+                    text: 'Localização',
+                    onPress: locationAction
                   ),
-                  Expanded(
-                    child: TextButton(
-                      onPressed: (){},
-                      child: const Column(
-                        children: <Widget>[
-                          Icon(Icons.share, color: Colors.blue,),
-                          Text("Compartilhar")
-                        ],
-                      )
-                    )
-                  )
+                  Botao(
+                    icon: Icon(Icons.share),
+                    text: 'Compartilhar',
+                    onPress: shareAction
+                  ),
                 ],
               ),
             ),
