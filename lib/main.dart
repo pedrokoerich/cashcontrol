@@ -25,9 +25,20 @@ class CashControl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData( //https://api.flutter.dev/flutter/material/ThemeData-class.html
+        brightness: Brightness.dark,
+      ),
+
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('EU NÃO ACREDITO!')
+          backgroundColor: Colors.cyanAccent,
+          title: const Text(
+            'EU NÃO ACREDITO!',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
         body: Column(
           children: <Widget>[
