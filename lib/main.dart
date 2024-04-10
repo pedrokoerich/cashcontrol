@@ -31,88 +31,23 @@ class CashControl extends StatelessWidget {
 
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.cyanAccent,
-          title: const Text(
-            'EU NÃO ACREDITO!',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+          title: const Text("Meu Primero App"),
         ),
-        body: Column(
-          children: <Widget>[
-            const Image(
-              image: AssetImage('assets/muro.jpg')
-            ),
-            Container(
-              padding: const EdgeInsets.all(20),
-              child: const Row(
-                children: [
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start, //alinha à esquerda
-                      children: [
-                        Text(
-                          "Ponto Turítistico",
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black
-                          
-                          ),
-                        ),
-                        Text(
-                          "Localização",
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.grey
-                          ),
-                        )
-                      ],
-                    )
-                  ),
-                  Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.star,
-                        color: Colors.blue,
-                      ),
-                      Text("3.286")
-                    ],
-                  )
-                ],
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.all(20),
-              child: Row(
-                children: [
-                  Botao(
-                    icon: Icon(Icons.share),
-                    text: 'Ligar',
-                    onPress: callAction
-                  ),
-                  Botao(
-                    icon: Icon(Icons.location_on),
-                    text: 'Localização',
-                    onPress: locationAction
-                  ),
-                  Botao(
-                    icon: Icon(Icons.share),
-                    text: 'Compartilhar',
-                    onPress: shareAction
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.all(20),
-              child: const Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
-            )
+        body: ListView(
+          children: const <Widget>[
+           ListTile(
+            leading: Icon(Icons.map),
+            trailing: Text("Selecionado"),
+            title: Text("Nome"),
+           ),
+           ListTile(
+            leading: Icon(Icons.map),
+            trailing: Text("Selecionado"),
+            title: Text("Nome"),
+           )
           ],
-        ) 
-      )
+        ),
+      ) 
     );
   }
 }
